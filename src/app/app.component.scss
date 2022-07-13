@@ -1,0 +1,14 @@
+.main-app {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: 100vh;
+
+    .container {
+        flex: 1;
+    }
+
+    .footer-container {
+        justify-self: flex-end;
+    }
+}

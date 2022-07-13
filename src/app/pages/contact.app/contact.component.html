@@ -1,0 +1,8 @@
+<main class="app-contact">
+    <app-contact-filter></app-contact-filter>
+    <app-contact-list (onRemove)="onRemoveContact($event)" (onSelect)="selectedContactId=$event"
+        [contacts]="(contacts!)"></app-contact-list>
+    <app-msg-modal *ngIf="msg" [msg]="this.msg"></app-msg-modal>
+    <a class="add-button" routerLink="edit" title="Add Contact"><img src='./assets/img/plus.png' /></a>
+</main>
+<router-outlet></router-outlet>

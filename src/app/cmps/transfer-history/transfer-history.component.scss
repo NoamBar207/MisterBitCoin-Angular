@@ -1,0 +1,64 @@
+.trans-history-container {
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    overflow-x: hidden;
+
+    h3 {
+        margin: 0;
+        margin-top: 6px;
+    }
+
+    .tans-history-title {
+        text-decoration: underline;
+    }
+
+    .trans-history-list {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr 1fr;
+        max-height: 250px;
+        overflow-y: auto;
+        align-items: center;
+        .trans-history-preview {
+            margin: 5px;
+            p {
+                span {
+                    font-weight: 700;
+                    color: rgb(191, 216, 189);
+                }
+            }
+        }
+    }
+}
+@media screen and(max-width:720px) {
+    .trans-history-container {
+        width: 500px
+    }
+}
+
+@media screen and(max-width:550px) {
+    .trans-history-container {
+        width: 300px;
+
+        .trans-history-list {
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: 1fr 1fr 1fr;
+
+            .trans-history-preview {
+                margin: 5px;
+
+                p {
+                    font-size: 12px;
+
+                    t span {
+                        font-weight: 600;
+                        color: rgb(179, 211, 176);
+                    }
+                }
+            }
+        }
+    }
+}

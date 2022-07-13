@@ -1,0 +1,40 @@
+.charts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        margin: 0;
+        margin-bottom: 12px;
+    }
+
+    .charts-title {
+        text-decoration: underline;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 12px;
+
+        .chart-container {
+            text-align: center;
+
+            h2 {
+                text-decoration: underline;
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media screen and(max-width:550px) {
+    .charts {
+        font-size: 10px;
+        gap: 0;
+    }
+}

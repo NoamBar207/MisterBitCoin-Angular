@@ -1,0 +1,16 @@
+<section *ngIf="moves.length; else noMoves" class="trans-history-container">
+    <h3 class="tans-history-title">Your Last Moves</h3>
+    <div class="trans-history-list">
+        <div class="trans-history-preview" *ngFor="let move of moves">
+            <p>To: <span>{{move.to}}</span></p>
+            <p>At: {{move.at | date : 'dd-MM-yyyy hh:mm a'}}</p>
+            <p>Amount: <span>{{move.amount}}</span> coins</p>
+        </div>
+    </div>
+</section>
+
+<ng-template #noMoves>
+    <section class="trans-history-container">
+        <h1 class="tans-history-title">No Moves Yet</h1>
+    </section>
+</ng-template>
